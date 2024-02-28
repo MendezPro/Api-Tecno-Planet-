@@ -1,0 +1,26 @@
+{
+  "name": "compu-api",
+  "version": "1.0.0",
+  "description": "api de un servicio de registro de mantemiento",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "mongoose",
+    "express",
+    "ejs"
+  ],
+  "author": "carlos",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongoose": "^8.2.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.0"
+  }
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Tecno Planet</title>
+    <style>
+ body {
+    background-color: #f5f6fa; /* Color de fondo */
+    color: #333; /* Color del texto */
+    font-family: Arial, sans-serif; /* Fuente */
+}
+
+h1 {
+    text-align: center; /* Alineación centrada */
+    margin-top: 20px; /* Margen superior */
+    color: #3498db; /* Color del texto */
+}
+
+/* Estilos para el encabezado */
+.ui-page-theme-a .ui-bar-inherit {
+    background-color: #3498db; /* Color de fondo */
+    color: #fff; /* Color del texto */
+}
+
+/* Estilos para el contenido */
+.ui-content {
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Estilos para las imágenes */
+.image-cont {
+    text-align: center; /* Alineación centrada */
+    margin-top: 20px; /* Margen superior */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.image-cont img {
+    max-width: 100%; /* Ancho máximo */
+    max-height: 100%; /* Altura máxima */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+/* Estilos para la lista de productos */
+#product-list {
+    background-color: #f9f9f9; /* Color de fondo */
+}
+
+#product-list li {
+    border-bottom: 1px solid #ddd; /* Borde inferior */
+    background-color: #fff; /* Color de fondo de los elementos de la lista */
+}
+
+#product-list h2 {
+    color: #333; /* Color del texto del título */
+    font-weight: bold; /* Texto en negrita */
+}
+
+#product-list p {
+    color: #666; /* Color del texto del párrafo */
+}
+
+/* Estilos para el formulario de búsqueda */
+form {
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+#search {
+    width: 100%; /* Ancho completo */
+    padding: 5px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border: 1px solid #ddd; /* Borde */
+    border-radius: 5px; /* Borde redondeado */
+}
+
+        </style>
+</head>
+<body>
+
+<h1>Tecno Planet</h1>
+ <!-- -----------------------------Pagina inicio----------------------- -->
+
+      
+
+ <div data-role="page" id="page1">
+    <div data-role="header">
+      <div data-role="navbar">
+          <ul>
+            <li><a href="#page1" data-icon="heart">Inicio</a></li>
+            <li><a href="#page2" data-icon="info" class="ui-btn-active">Registro</a></li>
+            <li><a href="#page3" data-icon="location">Lugar</a></li>
+          </ul>
+          </div><!-- /navbar -->
+    <div role="main" class="ui-content">
+      <h2>Bienvenido a Tecno Planet</h2>
+      <div class="image-cont">
+        <img src="https://urbanamarketplace.com/wp-content/uploads/2023/08/IMG_20230725_182444_493-1200x1200.jpg" alt="">
+    
+      </div>
+      <p>Servicio de alta calidad</p>
+      <p>Mantenimiento correctivo, preventivo damos garantia en el Servicio</p>
+    </div>
+  
+    <div data-role="footer">
+     
+    </div>
+  
+  </div>
+  </div>
+
+
+
+<div data-role="page" id="page2">
+    <div data-role="header">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#page1" data-icon="heart">Inicio</a></li>
+                <li><a href="#page2" data-icon="info" class="ui-btn-active">Registro</a></li>
+                <li><a href="#page3" data-icon="location">Lugar</a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div>
+    <div data-role="content">
+        <form action="/" method="POST">
+            <label for="txt_serialNumber">Número de serie:</label>
+            <input type="text" name="serialNumber" id="txt_serialNumber" placeholder="Número de serie" required>
+
+            <label for="txt_brand">Marca:</label>
+            <input type="text" name="brand" id="txt_brand" placeholder="Marca" required>
+
+            <label for="txt_model">Modelo:</label>
+            <input type="text" name="model" id="txt_model" placeholder="Modelo" required>
+
+            <label for="txt_processor">Procesador:</label>
+            <input type="text" name="processor" id="txt_processor" placeholder="Procesador">
+
+            <label for="txt_ram">RAM:</label>
+            <input type="text" name="ram" id="txt_ram" placeholder="RAM">
+
+            <label for="txt_storage">Almacenamiento:</label>
+            <input type="text" name="storage" id="txt_storage" placeholder="Almacenamiento">
+
+            <label for="txt_maintenanceType">Tipo de mantenimiento:</label>
+            <input type="text" name="maintenanceType" id="txt_maintenanceType" placeholder="Tipo de mantenimiento">
+
+            <label for="txt_maintenanceDescription">Descripción del mantenimiento:</label>
+            <input type="text" name="maintenanceDescription" id="txt_maintenanceDescription" placeholder="Descripción del mantenimiento">
+
+            <label for="txt_maintenanceDate">Fecha de mantenimiento:</label>
+            <input type="date" name="maintenanceDate" id="txt_maintenanceDate" placeholder="Fecha de mantenimiento" required>
+
+            <label for="txt_technician">Técnico:</label>
+            <input type="text" name="technician" id="txt_technician" placeholder="Técnico">
+
+            <label for="txt_status">Estado:</label>
+            <select name="status" id="txt_status" data-role="slider" data-mini="true">
+                <option value="In maintenance">En mantenimiento</option>
+                <option value="Fixed">Arreglado</option>
+            </select>
+
+            <button type="submit" id="submit-6" class="ui-shadow ui-btn ui-corner-all ui-mini">Guardar</button>
+        </form>
+
+        <form>
+            <input data-type="search" id="searchForCollapsibleSetChildren">
+        </form>
+        <div data-role="collapsibleset" data-filter="true" data-children="> div, > div div ul li" data-inset="true" id="collapsiblesetForFilterChildren" data-input="#searchForCollapsibleSetChildren">
+            <% computerMaintenances.forEach((maintenance) => { %>
+                <div data-role="collapsible" data-filtertext="<%= maintenance.serialNumber %>">
+                    <h3><%= maintenance.serialNumber %></h3>
+                    <ul data-role="listview" data-inset="false">
+                        <li>Número de serie: <%= maintenance.serialNumber %></li>
+                        <li>Marca: <%= maintenance.brand %></li>
+                        <li>Modelo: <%= maintenance.model %></li>
+                        <li>Procesador: <%= maintenance.processor %></li>
+                        <li>RAM: <%= maintenance.ram %></li>
+                        <li>Almacenamiento: <%= maintenance.storage %></li>
+                        <li>Tipo de mantenimiento: <%= maintenance.maintenanceType %></li>
+                        <li>Descripción del mantenimiento: <%= maintenance.maintenanceDescription %></li>
+                        <li>Fecha de mantenimiento: <%= maintenance.maintenanceDate %></li>
+                        <li>Técnico: <%= maintenance.technician %></li>
+                        <li>Estado: <%= maintenance.status %></li>
+                        <li><a href="/<%= maintenance.serialNumber %>" class="ui-btn">Editar</a></li>
+                        <li><a href="/delete/<%= maintenance.serialNumber %>" class="ui-btn">Eliminar</a></li>
+                    </ul>
+                </div>
+                <% }) %>
+                
+        </div>
+    </div>
+    <div data-role="footer">
+     
+    </div>
+</div>
+
+
+
+
+<div data-role="page" id="page3">
+    <div data-role="header">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#page1" data-icon="heart">Inicio</a></li>
+                <li><a href="#page2" data-icon="info" class="ui-btn-active">Registro</a></li>
+                <li><a href="#page3" data-icon="location">Lugar</a></li>
+            </ul>
+        </div><!-- /navbar -->
+        <h1>Localización</h1>
+    </div>
+    <div role="main" class="ui-content">
+        <h2>Encuéntranos en:</h2>
+        <p>Dirección: Av. Principal #123, Colonia Centro, Ciudad</p>
+        <p>Teléfono: (123) 456-7890</p>
+        <p>Email: info@papeleriauno.com</p>
+        <p>Horario de atención: Lunes a Viernes de 9:00 am a 6:00 pm, Sábados de 9:00 am a 2:00 pm</p>
+        <p>Síguenos en redes sociales: <a href="https://www.facebook.com/papeleriauno">Facebook</a>, <a href="https://twitter.com/papeleriauno">Twitter</a>, <a href="https://www.instagram.com/papeleriauno">Instagram</a></p>
+    </div>
+    <div data-role="footer" data-position="fixed">
+ 
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
